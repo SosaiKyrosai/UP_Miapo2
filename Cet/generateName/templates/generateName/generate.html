@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{%block tittle%}
+Главная
+{%endblock%}
+{%block namepage%}
+<h1 class="h2">Генератор котячьих имен</h1>
+{%endblock%}
+{%block content%}
+<div>
+    <h6>↓ Имя будет тут ↓</h6>
+    <div id="nameCat" class="hideable"></div>
+    <br>
+    <button type="button" class="btn btn-success" onclick="nameInField();">Сгенерить имя</button>
+
+    <script>
+
+        function nameInField(){
+        var name = generateWord();
+        document.getElementById('nameCat').innerHTML = name;
+        }
+
+        function generateWord() {
+        const vowels = ['a', 'e', 'i', 'o', 'u'];
+        const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+        const length = Math.floor(Math.random() * 10) + 3; // генерируем случайную длину от 3 до 10
+
+        let word = '';
+         let useVowels = Math.random() < 0.5; // генерируем случайное начальное значение для чередования
+
+         for (let i = 0; i < length; i++) {
+         const possibleLetters = useVowels ? vowels : consonants; // выбираем массив букв в зависимости от того, какая буква нужна (гласная или согласная)
+            const randomLetter = possibleLetters[Math.floor(Math.random() * possibleLetters.length)]; // генерируем случайную букву из выбранного массива
+
+         word += randomLetter; // добавляем букву к слову
+         useVowels = !useVowels; // меняем значение для чередования на следующей итерации
+        }
+
+         return word;
+        }
+    </script>
+</div>
+{%endblock%}
