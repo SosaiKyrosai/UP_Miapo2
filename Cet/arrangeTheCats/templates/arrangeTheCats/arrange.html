@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{%block tittle%}
+Расставлять
+{%endblock%}
+{%block namepage%}
+<h1 class="h2">Переместить кота</h1>
+{%endblock%}
+{%block content%}
+<br>
+<br>
+<div>
+    <h4>Нажмите на котика чтобы его переместить на место</h4>
+    <div id="pCat" class="hideable"></div>
+    <br>
+    <canvas id="canvas" class="hideable" width="400" height="400"></canvas>
+     <button type="button" class="btn btn-success" onclick="ok();">Готово</button>
+    <script>
+
+// создаем canvas и добавляем его на страницу
+const canvas = new fabric.Canvas('canvas');
+function ok() {
+    alert("Ура котик на месте");
+}
+
+//добавляем лежанку кота
+fabric.Image.fromURL('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHFWEWrj8G6eQKFAJqF-lYR7PdvwUtVe_Q6Q&usqp=CAU', function(oImg) {
+    oImg.set({
+    left: 100,
+    top: 100
+  })
+  canvas.add(oImg);
+});
+
+// загружаем изображение на canvas
+fabric.Image.fromURL('https://tlgrm.ru/_/stickers/d47/df4/d47df409-404d-31cc-9749-652881191b93/11.webp', function(img) {
+  // задаем размеры и позицию изображения
+  img.scale(0.25);
+  img.set({
+    left: 50,
+    top: 50
+  });
+
+  // добавляем изображение на canvas
+  canvas.add(img);
+
+  // добавляем обработчик события click на изображение
+  img.on('modified', function() {
+    // меняем изображение на другое
+    img.setSrc('https://tlgrm.ru/_/stickers/d47/df4/d47df409-404d-31cc-9749-652881191b93/11.webp', function() {
+      // перерисовываем canvas
+      canvas.renderAll();
+
+      // выводим оповещение
+        document.getElementById('pCat').innerHTML = "Котик передвинут";
+    });
+  });
+});
+
+    </script>
+</div>
+{%endblock%}
