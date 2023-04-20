@@ -6,6 +6,6 @@ urlpatterns = [
     # path('generate/', include('generateName.urls')),
     # path('estimate/', include('estimateName.urls')),
     path('pat/', include('patCat.urls')),
-    # path('arrange/', include('arrangeTheCats.urls')),
+    path('arrange/', include('arrangeTheCats.urls')),
     path('', include('CetApp.urls')),
 ]

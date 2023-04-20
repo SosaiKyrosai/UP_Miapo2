@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'CetApp',
     # 'generateName',
     # 'estimateName',
-    'patCat',
-    # 'arrangeTheCats',
+    # 'patCat',
+    'arrangeTheCats',
 ]
 
 MIDDLEWARE = [

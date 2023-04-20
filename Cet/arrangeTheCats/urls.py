@@ -7,7 +7,7 @@ from django.urls import path
 
 urlpatterns = [
 
-    path('cat/', views.pCat, name='pCat'),
+    path('cats/', views.arrCats, name='arrCats'),
 
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
