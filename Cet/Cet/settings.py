@@ -39,24 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'CetApp',
-    # 'generateName',
-<<<<<<< HEAD
-    # 'estimateName',
-<<<<<<< HEAD
-    'patCat',
-=======
-    # 'patCat',
->>>>>>> b62f4297a0614e958e5fa281040c08a28bee7f28
-    # 'arrangeTheCats',
-=======
+    'generateName',
     'estimateName',
-<<<<<<< HEAD
-    # 'patCat',
-=======
     'patCat',
->>>>>>> 4d7cadb08f4e015747dc5c20f5ed0c0434491b54
     'arrangeTheCats',
->>>>>>> estimate
+
 ]
 
 MIDDLEWARE = [
