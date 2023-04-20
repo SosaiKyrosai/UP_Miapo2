@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',
     'CetApp',
     # 'generateName',
+<<<<<<< HEAD
     # 'estimateName',
 <<<<<<< HEAD
     'patCat',
@@ -47,6 +48,15 @@ INSTALLED_APPS = [
     # 'patCat',
 >>>>>>> b62f4297a0614e958e5fa281040c08a28bee7f28
     # 'arrangeTheCats',
+=======
+    'estimateName',
+<<<<<<< HEAD
+    # 'patCat',
+=======
+    'patCat',
+>>>>>>> 4d7cadb08f4e015747dc5c20f5ed0c0434491b54
+    'arrangeTheCats',
+>>>>>>> estimate
 ]
 
 MIDDLEWARE = [
