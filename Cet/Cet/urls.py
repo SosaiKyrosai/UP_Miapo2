@@ -1,24 +1,25 @@
-"""
-URL configuration for Cet project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('generate/', include('generateName.urls')),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    path('estimate/', include('estimateName.urls')),
+<<<<<<< HEAD
+    # path('pat/', include('patCat.urls')),
+    # path('arrange/', include('arrangeTheCats.urls')),
+=======
+    # path('estimate/', include('estimateName.urls')),
+    path('pat/', include('patCat.urls')),
+    path('arrange/', include('arrangeTheCats.urls')),
+>>>>>>> pat
+=======
+    path('pat/', include('patCat.urls')),
+    path('arrange/', include('arrangeTheCats.urls')),
+>>>>>>> 4d7cadb08f4e015747dc5c20f5ed0c0434491b54
+>>>>>>> estimate
     path('', include('CetApp.urls')),
 ]

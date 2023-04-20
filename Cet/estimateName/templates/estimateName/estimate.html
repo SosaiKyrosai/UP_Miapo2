@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{%block tittle%}
+Главная
+{%endblock%}
+{%block namepage%}
+<h1 class="h2">Оценщик котячьих имен</h1>
+{%endblock%}
+{%block content%}
+<div class="form-group">
+        <label>Имя кота:</label>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" id="1" value="Имя котика">
+          </div>
+        </div>
+      </div>
+<br>
+<br>
+<div>
+    <h6>↓ Оценка будет тут ↓</h6>
+    <div id="estimateCat" class="hideable"></div>
+    <br>
+    <button type="button" class="btn btn-success" onclick="estimate();">Оценить имя</button>
+
+    <script>
+
+        function estimate(){
+        var answer = generateAnswer();
+        document.getElementById('estimateCat').innerHTML = answer;
+        }
+
+        function generateAnswer() {
+        var rates = ["Отличное имя!", "Не очень, подумай над другим, еще не поздно", "Может сгенерируешь новое?", "Оригинально", "Супер! Отлично! Класс!"];
+        const answerNum = Math.floor(Math.random() * 4) + 0; // генерируем ответ от 0 до 4
+        var answer = rates[answerNum];
+        return answer;
+        }
+    </script>
+</div>
+{%endblock%}
