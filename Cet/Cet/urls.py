@@ -5,10 +5,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('generate/', include('generateName.urls')),
 <<<<<<< HEAD
+<<<<<<< HEAD
     # path('estimate/', include('estimateName.urls')),
 <<<<<<< HEAD
     path('pat/', include('patCat.urls')),
 =======
+=======
+>>>>>>> generator
 =======
 <<<<<<< HEAD
     path('estimate/', include('estimateName.urls')),
@@ -26,5 +29,6 @@ urlpatterns = [
     path('pat/', include('patCat.urls')),
     path('arrange/', include('arrangeTheCats.urls')),
 >>>>>>> 4d7cadb08f4e015747dc5c20f5ed0c0434491b54
+>>>>>>> estimate
     path('', include('CetApp.urls')),
 ]
