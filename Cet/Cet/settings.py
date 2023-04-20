@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'CetApp',
     # 'generateName',
     # 'estimateName',
-    # 'patCat',
+    'patCat',
     # 'arrangeTheCats',
 ]
 
