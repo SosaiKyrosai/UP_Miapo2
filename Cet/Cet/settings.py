@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'CetApp',
     # 'generateName',
     # 'estimateName',
+<<<<<<< HEAD
     'patCat',
+=======
+    # 'patCat',
+>>>>>>> b62f4297a0614e958e5fa281040c08a28bee7f28
     # 'arrangeTheCats',
 ]
 
