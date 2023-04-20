@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'CetApp',
+    # 'generateName',
+    # 'estimateName',
+    # 'patCat',
+    # 'arrangeTheCats',
 ]
 
 MIDDLEWARE = [
