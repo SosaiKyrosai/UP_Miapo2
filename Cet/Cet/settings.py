@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # 'generateName',
     'estimateName',
     # 'patCat',
-    # 'arrangeTheCats',
+    'arrangeTheCats',
 ]
 
 MIDDLEWARE = [
